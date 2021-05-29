@@ -4,7 +4,7 @@ Configurable CLI docs for js/ts comments
 
 # Example
 
-Run `yarn generate` to run the example
+Run `yarn build` and `yarn generate` to run the example
 
 ## Configuration
 
