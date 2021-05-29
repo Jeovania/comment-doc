@@ -1,0 +1,5 @@
+{
+  "filePaths": ["./examples/**/*.{js,ts}"],
+  "ignorePaths": ["node_modules", "./examples/file2.js"],
+  "tags": ["route", "owner"]
+}

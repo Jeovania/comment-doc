@@ -1,0 +1,57 @@
+{
+  "name": "comment-doc",
+  "description": "Configurable CLI docs for js/ts comments",
+  "version": "0.1.0",
+  "module": "dist/comment-doc.esm.js",
+  "author": "Jeovania Abreu",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "generate": "node ./dist"
+  },
+  "dependencies": {
+    "comment-parser": "^1.1.5",
+    "fast-glob": "^3.2.5",
+    "rc-config-loader": "^4.0.0"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.11.0",
+    "@types/glob": "^7.1.3",
+    "husky": "^6.0.0",
+    "minimist": "^1.2.5",
+    "size-limit": "^4.11.0",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.2.0",
+    "typescript": "^4.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "size-limit": [
+    {
+      "path": "dist/comment-doc.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/comment-doc.esm.js",
+      "limit": "10 KB"
+    }
+  ]
+}
